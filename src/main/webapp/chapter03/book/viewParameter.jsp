@@ -9,6 +9,7 @@
 <title>요청 파라미터 출력</title>
 </head>
 <body>
+
 <b>request.getParameter()메서드 사용</b><br />
 name 파라미터 =<%=request.getParameter("name") %>
 address 파라미터 =<%=request.getParameter("address") %>
