@@ -8,6 +8,7 @@
 	response.addCookie(cookie1);
 	
 	Cookie cookie2 = new Cookie("only", "onlycookie");
+	//도메인 설정하지 않은 only쿠키 추가
 	response.addCookie(cookie2);
 	Cookie cookie3 = new Cookie("invalid", "invalidcookie");
 	cookie3.setDomain("javacan.tistory.com");
@@ -22,6 +23,7 @@
 </head>
 <body>
 다음과 같이 쿠키를 생성했습니다.
+<br>
 <%= cookie1.getName() %> = <%= cookie1.getValue() %>
 [<%=cookie1.getDomain() %>]
 <br>
