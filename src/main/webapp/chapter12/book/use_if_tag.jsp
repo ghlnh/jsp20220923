@@ -1,24 +1,24 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <% request.setCharacterEncoding("utf-8"); %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>   
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>if ÅÂ±×</title>
+<title>if íƒœê·¸</title>
 </head>
 <body>
 <c:if test="true">
-¹«Á¶°Ç ¼öÇà <br/>
+ë¬´ì¡°ê±´ ìˆ˜í–‰ <br/>
 </c:if>
 
 <c:if test="${param.name =='bk'}">
-name ÆÄ¶ó¹ÌÅÍÀÇ °ªÀÌ ${param.name } ÀÔ´Ï´Ù. <br />
+name íŒŒë¼ë¯¸í„°ì˜ ê°’ì´ ${param.name } ìž…ë‹ˆë‹¤. <br />
 </c:if>
 
 <c:if test="${18 <param.age }">
-´ç½ÅÀÇ ³ªÀÌ´Â 18¼¼ ÀÌ»óÀÔ´Ï´Ù.
+ë‹¹ì‹ ì˜ ë‚˜ì´ëŠ” 18ì„¸ ì´ìƒìž…ë‹ˆë‹¤.
 </c:if>
 </body>
 </html>

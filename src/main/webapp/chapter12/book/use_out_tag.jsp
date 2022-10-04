@@ -1,9 +1,9 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import = "java.io.IOException, java.io.FileReader" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <html>
-<head><title>¼Ò½º º¸±â</title></head>
+<head><title>ì†ŒìŠ¤ ë³´ê¸°</title></head>
 <body>
 
 <%
@@ -13,13 +13,13 @@
         reader = new FileReader(getServletContext().getRealPath(path));
 %>
 <pre>
-¼Ò½º ÄÚµå = <%= path %>
+ì†ŒìŠ¤ ì½”ë“œ = <%= path %>
 <c:out value="<%= reader %>" escapeXml="true" />
 </pre>
 <%
     } catch(IOException ex) {
 %>
-¿¡·¯: <%= ex.getMessage() %>
+ì—ëŸ¬: <%= ex.getMessage() %>
 <%
     } finally {
         if (reader != null)

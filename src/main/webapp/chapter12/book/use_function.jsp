@@ -28,10 +28,9 @@ endsWith(str1, str2) = "${fn:endsWith(str1, str2) }" <br />
 contains(str1, str2) = "${fn:contains(str1, str2) }" <br />
 containsIgnoreCase(str1, str2) = "${fn:containsIgnoreCase(str1, str2) }" <br />
 
-//여기서 예외 발생...학원컴으로 다시 시도
-<c:set var="array" value= "${fn:split(tokens,','}"/>
+<c:set var="array" value="${fn:split(tokens,',')}"/> <!--str1= , str2=','(콤마 스트링)  -->
 
-join(array,"-") = "${fn:join(array, "-"}" <br />
+join(array,"-") = "${fn:join(array, "-")}" <br />
 escapeXml(str1) = "${fn:escapeXml(str1) }" <br />
 </body>
 </html>
