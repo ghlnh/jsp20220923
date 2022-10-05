@@ -1,10 +1,10 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
 <%@ page import="java.util.HashMap" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
     HashMap<String,Object> mapData = new HashMap<String,Object>();
-    mapData.put("name", "ÃÖ¹ü±Õ");
+    mapData.put("name", "ìµœë²”ê· ");
     mapData.put("today", new java.util.Date());
 %>
 <c:set var="intArray" value="<%= new int[] {1,2,3,4,5} %>" />
@@ -12,25 +12,25 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="EUC-KR">
-<title>forEach ÅÂ±×</title>
+<meta charset="utf-8">
+<title>forEach íƒœê·¸</title>
 </head>
 <body>
-<h4>1ºÎÅÍ 100±îÁö È¦¼öÀÇ ÇÕ</h4>
+<h4>1ë¶€í„° 100ê¹Œì§€ í™€ìˆ˜ì˜ í•©</h4>
 <c:set var="sum" value="0" />
 <c:forEach var="i" begin="1" end="100" step="2">
 <c:set var="sum" value="${sum + i}" />
 </c:forEach>
-°á°ú = ${sum}
+ê²°ê³¼ = ${sum}
 
-<h4>±¸±¸´Ü: 4´Ü</h4>
+<h4>êµ¬êµ¬ë‹¨: 4ë‹¨</h4>
 <ul>
 <c:forEach var="i" begin="1" end="9">
     <li>4 * ${i} = ${4 * i}
 </c:forEach>
 </ul>
 
-<h4>intÇü ¹è¿­</h4>
+<h4>intí˜• ë°°ì—´</h4>
 <c:forEach var="i" items="${intArray}" begin="2" end="4" varStatus="status">
     ${status.index}-${status.count}-[${i}] <br />
 </c:forEach>

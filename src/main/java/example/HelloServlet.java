@@ -11,6 +11,7 @@ import java.io.PrintWriter;
 
 //@WebServlet 어노테이션은 urlPatterns 속성을 가짐 
 //urlPatterns은 해당 서블릿과 매핑될 URL패턴을 지정할 때 사용
+// /hello로 들어오는 URL을 HelloServlet이 처리하도록 설정
 @WebServlet(urlPatterns = "/hello")
 public class HelloServlet extends HttpServlet {
 

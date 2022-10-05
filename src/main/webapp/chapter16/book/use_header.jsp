@@ -1,15 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"
-    pageEncoding="EUC-KR"%>
-<%@ taglib prefix = "tf" tagdir = "/WEB-INF/tags" %>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="tf" tagdir="/WEB-INF/tags/chapter16"%>
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="EUC-KR">
-<title>Á¦¸ñ Ãâ·Â</title>
+<title>ì œëª© ì¶œë ¥</title>
 </head>
 <body>
-    <tf:header title = "ÅØ½ºÆ® Á¦¸ñ" level = "2" />
-    <tf:header title = "${'EL Á¦¸ñ'}" level = "3" />
-    <tf:header title = '<%="Ç¥Çö½Ä Á¦¸ñ"%>'/>
+    <tf:header title = "í…ìŠ¤íŠ¸ ì œëª©" level = "2" />
+    <tf:header title = "${'EL ì œëª©'}" level = "3" />
+    <tf:header title = '<%="í‘œí˜„ì‹ ì œëª©"%>'/>
 </body>
 </html>
