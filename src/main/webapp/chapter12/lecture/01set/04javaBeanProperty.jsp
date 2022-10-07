@@ -2,7 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page import="jsp20220923.chap07.*" %>
-<% request.setCharacterEncoding("utf-8"); %>
+<%-- <% request.setCharacterEncoding("utf-8"); %> --%>
 <!DOCTYPE html>
 <html>
 <head>

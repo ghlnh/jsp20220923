@@ -10,8 +10,8 @@ public class NullParameterFilter implements Filter {
 	@Override
 	//"parameterNames"초기화 파라미터의 값을 읽어와 기본값을 저장할 파라미터 목록을 parameterNames필드에 저장
 	//파라미터 목록은 콤마, 로 구분
-	public void init(FilterConfig filterConfig) throws ServletException {
-		String names = filterConfig.getInitParameter("parameterNames");
+	public void init(FilterConfig Config) throws ServletException {
+		String names = Config.getInitParameter("parameterNames");
 		StringTokenizer st = new StringTokenizer(names, ",");
 		parameterNames = new String[st.countTokens()];
 		

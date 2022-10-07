@@ -47,11 +47,47 @@
            <param-name>poolName</param-name>
            <param-value>chap14</param-value>
        </init-param>
+   </servlet> 
+  <!--  --> 
+   <servlet>
+   	<servlet-name>servlet06</servlet-name>
+   	<servlet-class>servlet.chap17.Servlet06</servlet-class>
    </servlet>
    
+   <servlet-mapping>
+   	<servlet-name>servlet06</servlet-name>
+   	<url-pattern>/servlet6</url-pattern>
+   </servlet-mapping>
+   
+   <!--/servlet7로 요청왔을 때 serlvet.chap17.Servlet07 실행  -->
+   
+   <servlet>
+   	<servlet-name>servlet07</servlet-name>
+   	<servlet-class>servlet.chap17.Servlet07</servlet-class>
+   	<init-param>
+   		<param-name>pw</param-name>
+   		<param-value>1234</param-value>
+   	</init-param>
+   	<init-param>
+   		<param-name>ip</param-name>
+   		<param-value>2.255.1.99</param-value>
+   	</init-param>
+   	<init-param>
+   		<param-name>userName</param-name>
+   		<param-value>gomeesomee</param-value>
+   	</init-param>
+   </servlet>
+   
+   <servlet-mapping>
+   	<servlet-name>servlet07</servlet-name>
+   	<url-pattern>/servlet7</url-pattern>
+   </servlet-mapping>
+   
+   
+   <!-- 필터 연습1 -->
    <filter>
         <filter-name>NullParameter</filter-name>
-        <filter-class>filter.NullParameterFilter</filter-class>
+        <filter-class>chap19.NullParameterFilter</filter-class>
         <init-param>
             <param-name>parameterNames</param-name>
             <param-value>id,name</param-value>
@@ -62,4 +98,33 @@
         <filter-name>NullParameter</filter-name>
         <url-pattern>*.jsp</url-pattern>
     </filter-mapping>
+    
+    
+    <!--필터 연습2  -->
+    <filter>
+        <filter-name>LoginCheck</filter-name>
+        <filter-class>chap19.LoginCheckFilter</filter-class>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>LoginCheck</filter-name>
+        <url-pattern>/chapter19/book/*</url-pattern>
+    </filter-mapping>
+    
+    
+    
+	<filter>
+        <filter-name>encodingFilter</filter-name>
+        <filter-class>chap19.CharacterEncodingFilter</filter-class>
+        <init-param>
+            <param-name>encoding</param-name>
+            <param-value>utf-8</param-value>
+        </init-param>
+    </filter>
+
+    <filter-mapping>
+        <filter-name>encodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping> 
+    
 </web-app>
