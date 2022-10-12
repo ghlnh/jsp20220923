@@ -2,3 +2,9 @@
 .project
 /.settings/
 *.jar
+src/main/webapp/WEB-INF/props/jdbc.properties
+src/main/webapp/chapter14/viewMemberHistory.jsp
+src/main/webapp/chapter14/update.jsp
+src/main/webapp/chapter14/viewMember.jsp
+src/main/webapp/chapter14/viewMemberList.jsp
+src/main/webapp/chapter14/updateForm.jsp
