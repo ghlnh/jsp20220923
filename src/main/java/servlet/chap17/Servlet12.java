@@ -13,7 +13,7 @@ import jsp20220923.chap07.Book;
 /**
  * Servlet implementation class Servlet11
  */
-@WebServlet("/Servlet12")
+/* @WebServlet("/Servlet12") */
 public class Servlet12 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 

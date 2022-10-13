@@ -8,3 +8,7 @@ src/main/webapp/chapter14/update.jsp
 src/main/webapp/chapter14/viewMember.jsp
 src/main/webapp/chapter14/viewMemberList.jsp
 src/main/webapp/chapter14/updateForm.jsp
+src/main/java/chap14/MySQLDriverLoader.java
+src/main/webapp/chapter14/insert.jsp
+src/main/webapp/chapter14/insertForm.jsp
+src/main/webapp/chapter14/insertItem.jsp

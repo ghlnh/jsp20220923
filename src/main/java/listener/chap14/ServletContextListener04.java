@@ -19,6 +19,7 @@ public class ServletContextListener04 implements ServletContextListener {
      * Default constructor. 
      */
     public ServletContextListener04() {
+        // TODO Auto-generated constructor stub
     }
 
 	/**
@@ -32,24 +33,41 @@ public class ServletContextListener04 implements ServletContextListener {
      * @see ServletContextListener#contextInitialized(ServletContextEvent)
      */
     public void contextInitialized(ServletContextEvent sce)  { 
+		// 1. JDBC 드라이버 로딩
+		try {
+			Class.forName("org.mariadb.jdbc.Driver");
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	
     	ServletContext application = sce.getServletContext();
     	
+    	// jdbc 접속 정보 application 영역에 넣기
     	String propFile = "/WEB-INF/props/jdbc.properties";
     	
-    	try {
-    		InputStream is = application.getResourceAsStream(propFile);
+    	try (InputStream is = application.getResourceAsStream(propFile);) {
     		
     		Properties props = new Properties();
     		props.load(is);
     		
-    		application.setAttribute("jdbc.url",props.getProperty("jdbc.url"));
-    		application.setAttribute("jdbc.username",props.getProperty("jdbc.user"));
-    		application.setAttribute("jdbc.password",props.getProperty("jdbc.password"));
-			
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+    		application.setAttribute("jdbc.url", props.getProperty("jdbc.url"));
+    		application.setAttribute("jdbc.username", props.getProperty("jdbc.user"));
+    		application.setAttribute("jdbc.password", props.getProperty("jdbc.password"));
+    		
+    	} catch (Exception e) {
+    		e.printStackTrace();
+    		System.out.println("리스너에서 문제 생김");
+    	}
+    	
     	
     }
 	
 }
+
+
+
+
+
+
+
