@@ -6,6 +6,15 @@ public class Customer {
 	private String address;
 	private String city;
 	private String country;
+	private String contactName;
+
+	public String getContactName() {
+		return contactName;
+	}
+
+	public void setContactName(String contactName) {
+		this.contactName = contactName;
+	}
 
 	public String getCity() {
 		return city;

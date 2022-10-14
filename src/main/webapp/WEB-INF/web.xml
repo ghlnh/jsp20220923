@@ -212,10 +212,10 @@
   	</context-param>
   	
   	<!--웹 어플리케이션 구동 시, JDBC드라이버 로딩 서블릿 적용  -->
-  	<servlet>
+<!--   	<servlet>
         <servlet-name>mysqlDriverLoader</servlet-name>
         <servlet-class>chap14.MySQLDriverLoaderr</servlet-class>
         <load-on-startup>1</load-on-startup>
-    </servlet>
+    </servlet> -->
   	
 </web-app>

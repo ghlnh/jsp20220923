@@ -11,7 +11,11 @@
 </head>
 <body>
 	<h1>고객 목록</h1>
-	
+	<div>
+		${sessionScope.message }
+		<c:remove var="message" scope="session"/>
+	</div>
+	<a href="${pageContext.request.contextPath }/Servlet28">새 고객 등록하기</a>
 	<form action="">
 		<input type="text" name="keyword" value="${param.keyword }">
 		<input type="submit" value="이름검색">
@@ -21,6 +25,7 @@
 		<thead>
 			<tr>
 				<th>이름</th>
+				<th>이름2</th>
 				<th>주소</th>
 				<th>도시</th>
 				<th>나라</th>
@@ -30,6 +35,7 @@
 			<c:forEach items="${customers }" var="customer">
 				<tr>
 					<td>${customer.name }</td>
+					<td>${customer.contactName }</td>
 					<td>${customer.address }</td>
 					<td>${customer.city }</td>
 					<td>${customer.country }</td>

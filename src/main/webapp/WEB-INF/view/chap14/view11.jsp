@@ -15,10 +15,11 @@
 <h1>새 고객 입력</h1>
 
 <form action="" method="post">
-	CustomerName: <input type="text" name="cname"> <br>
-	Address : <input type="text" name="address"> <br>
-	City : <input type="text" name="city"> <br>
-	Country : <input type="text" name="country"> <br>
+	이름: <input type="text" name="cname"> <br>
+	이름2: <input type="text" name="contactName"> <br>
+	주소 : <input type="text" name="address"> <br>
+	도시 : <input type="text" name="city"> <br>
+	국가 : <input type="text" name="country"> <br>
 	<input type="submit" value="입력">
 	
 </form>
@@ -26,15 +27,17 @@
 		<thead>
 			<tr>
 				<th>이름</th>
+				<th>이름2</th>
 				<th>주소</th>
 				<th>도시</th>
-				<th>나라</th>
+				<th>국가</th>
 			</tr>
 		</thead>
 		<tbody>
 			<c:forEach items="${customers }" var="customer">
 				<tr>
 					<td>${customer.name }</td>
+					<td>${customer.contactName }</td>
 					<td>${customer.address }</td>
 					<td>${customer.city }</td>
 					<td>${customer.country }</td>
